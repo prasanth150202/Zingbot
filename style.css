@@ -1,0 +1,267 @@
+@media (max-width: 768px) {
+    .banner-5-title {
+        font-size: 1.5rem; /* Reduced font size for mobile */
+    }
+    .banner-area {
+        padding-top: 30px; /* Adjusting top padding for mobile */
+    }
+    .navbar-nav {
+        text-align: center; /* Center navbar items on mobile */
+    }
+    .navbar-toggler {
+        margin-left: auto; /* Ensures the toggle button is aligned */
+    }
+    .btn-md {
+        font-size: 14px; /* Reduce button font size */
+        padding: 12px 18px; /* Adjust button padding for mobile */
+    }
+    .bannerimage img {
+        width: 100%; /* Ensure image is responsive on mobile */
+        height: auto;
+    }
+    .announcement-bar{
+        font-size: 10px !important; 
+    }
+
+    .navbar {
+        background-color: #001f3f !important; /* Dark Blue */
+       
+    }
+    .logo-slider .slide img {
+        width: 50px  !important;
+        height: auto ;
+        margin:10px  !important ;
+    }
+}
+.glow-icon {
+    width: 100%;
+    position: relative;
+    filter: drop-shadow(0 0 15px rgba(6, 87, 153, 0.8));
+}
+
+.btn-primary{
+    background: linear-gradient(90deg, rgb(0, 149, 230) 0%, rgb(0, 137, 175) 48%, rgb(0, 131, 202) 100%);      
+}
+
+/* .announcement-bar {
+    background: linear-gradient(90deg, rgba(0,148,225,1) 0%, rgba(1,201,254,1) 10%, rgba(1,201,254,1) 83%, rgba(0,148,225,1) 94%);
+    text-align: center;
+    padding: 0;
+    font-weight: 500    ;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1050;
+    color:#ffffff;
+} */
+.navbar {
+    
+        background: linear-gradient(90deg, rgb(0, 78, 121) 0%, rgb(1, 159, 202) 48%, rgb(0, 101, 155) 100%);      
+    /* margin-top: 20px; Push navbar below announcement bar */
+}
+.navbar-nav {
+    margin: 0;
+}
+.nav-link {
+    color: #ffffff !important;
+}
+.btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #001f3f;
+}
+.btn-warning {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: #001f3f;
+}
+.btn-warning:hover {
+    background-color:transparent  !important;
+    
+    color: #ffffff !important;
+} 
+body {
+   margin: 0;
+   padding: 0; /* Prevent content from hiding behind fixed elements */
+ 
+}
+.glow-icon  img{
+    max-width: 70px;
+    filter: drop-shadow(0 0 25px rgb(0, 67, 94)); /* Brighter glow on hover */
+
+}
+
+.glow-icon:hover {
+    filter: drop-shadow(0 0 25px rgb(205, 225, 228)); /* Brighter glow on hover */
+  }
+
+  .hero-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+.content-section {
+    padding: 40px 20px;
+}
+.content-box {
+    background-color: white;
+    height: 180px;
+}
+.btn-custom {
+    background-color: #0056b3;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+}
+.btn-custom:hover {
+    background-color: #004494;
+}
+
+.custom-section {
+  /* Adjust color */
+   
+    padding: 40px;
+}
+.placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+}
+.highlight-btn {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.highlight-btn:hover {
+    background-color: #0056b3;
+}
+
+.marketing-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+
+.btn.active{
+border-color: #fff !important;
+}
+.features-content {
+    display: none;
+}
+
+.features-content.active {  
+    display: block;
+}
+
+.slider-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.logo-slider .slide img {
+    width: 100px;
+    height: auto;
+    margin:30px;
+}
+.navbar-brand img {
+    max-width: 200px;
+    height: auto;
+}
+
+.announcement-bar{
+    font-size: 15px; 
+}
+.zing-bot-gradient {
+    background: linear-gradient(90deg, rgb(0, 89, 107) 0%, rgba(0,148,225,1) 48%, rgb(0, 85, 109) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .mobile-break::after {
+        content: "\A"; /* Adds a line break */
+        white-space: pre;
+    }
+
+    .stats-heading {
+        background: linear-gradient(90deg, rgb(0, 89, 107) 0%, rgb(40, 121, 165) 48%, rgb(1, 62, 78) 100%);/* Dark blue */
+        font-weight: bold;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1.5rem!important;
+        
+    }
+    .stat-number {
+        font-size: 1.3rem !important;
+        font-weight: bold;
+        background: linear-gradient(90deg, rgb(0, 89, 107) 0%, rgb(40, 121, 165) 48%, rgb(1, 62, 78) 100%);/* Dark blue */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .stats-section{
+        margin: 50px 10px !important;   
+    }
+    
+.stats-heading-1 {
+    font-size: 1.5rem!important;   
+
+    
+}
+}
+
+.stats-heading {
+    background: linear-gradient(90deg, rgb(0, 69, 78) 0%, rgb(40, 121, 165) 48%, rgb(1, 67, 71) 100%);/* Dark blue */
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    
+}
+.stat-number {
+    font-size: 1.7rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(0, 61, 70) 0%, rgb(40, 121, 165) 48%, rgb(0, 52, 56) 100%);/* Dark blue */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.stat-text {
+    font-size: 1rem;
+    background: linear-gradient(90deg, rgb(0, 89, 107) 0%, rgb(40, 121, 165) 48%, rgb(1, 62, 78) 100%);/* Dark blue */
+    -webkit-background-clip: text;
+}
+.read-more {
+    display: inline-block;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(0, 89, 107) 0%, rgb(40, 121, 165) 48%, rgb(1, 62, 78) 100%);/* Dark blue */
+    -webkit-background-clip: text;
+    text-decoration: none;
+    border-bottom: 2px solid #002f87;
+}
+.read-more:hover {
+    color: #000;
+    border-color: #000;
+}
+
+.stats-section{
+    margin: 50px;   
+}
+
+.stats-heading-1 {
+    background: linear-gradient(90deg, rgb(0, 75, 85) 0%, rgb(40, 121, 165) 48%, rgb(0, 106, 114) 100%);/* Dark blue */
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    
+}
