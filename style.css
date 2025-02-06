@@ -28,7 +28,7 @@
        
     }
     .logo-slider .slide img {
-        width: 50px  !important;
+        width: 70px  !important;
         height: auto ;
         margin:10px  !important ;
     }
@@ -40,7 +40,7 @@
 }
 
 .btn-primary{
-    background: linear-gradient(90deg, rgb(0, 149, 230) 0%, rgb(0, 137, 175) 48%, rgb(0, 131, 202) 100%);      
+    background:  #003972  !important  ;
 }
 
 /* .announcement-bar {
@@ -54,6 +54,7 @@
     z-index: 1050;
     color:#ffffff;
 } */
+
 .navbar {
     
         background: linear-gradient(90deg, rgb(0, 78, 121) 0%, rgb(1, 159, 202) 48%, rgb(0, 101, 155) 100%);      
@@ -265,3 +266,106 @@ border-color: #fff !important;
     font-size: 2rem;
     
 }
+
+footer{
+    padding: 30px;
+    background: linear-gradient(90deg, rgb(0, 78, 121) 0%, rgb(1, 159, 202) 48%, rgb(0, 101, 155) 100%);      
+color:white;
+}
+footer a{
+color:white;
+text-decoration: none;
+}
+
+.about-section {
+    padding: 50px 0;
+   
+}
+.about-img {
+ width:250px;
+}
+@keyframes zoomInOut {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.09 ); }
+    100% { transform: scale(1); }
+}
+
+.click-animation {
+    animation: zoomInOut 1s infinite;
+}
+.text-grey{
+    color:rgb(63, 62, 62) !important;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .intro {
+    background: #6e4ce1;
+    color: #f6f2e8;
+  }
+
+  a {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    display: block;
+    margin: 20px 0 0 0;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+    color: #F6F2E8;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #6e4ce1;
+  }
+
+  /* horizontal scroll */
+
+
+  .horizontal-scoll-wrapper {
+    overflow: hidden;
+    height: 525px;
+    width: 100%; /* Ensure full width */
+    
+  }
+
+  .horizontal {
+    display: flex;
+    height: 100%;
+  
+  }
+
+  .horizontal > div {
+    display: flex;
+    flex-shrink: 0;
+    padding: 0 5px;
+    margin-top: 120px;
+  }
+
+  .horizontal > div:first-child {
+    padding: 0 5px 0 15px;
+  }
+
+  .horizontal > div:last-child {
+    padding: 0 15px 0 5px;
+  }
+
+  .horizontal .card {
+    align-items: stretch;
+    width: 540px;
+    padding: 50px 40px;
+    background: #6e4ce1;
+    border-radius: 38px;
+    color: #f6f2e8;
+  }
+
+  .features-content{
+    max-width: 300px ;
+  }
