@@ -3,17 +3,24 @@ gsap.registerPlugin(ScrollTrigger);
 let horizontalSection = document.querySelector('.horizontal');
 let totalWidth = horizontalSection.scrollWidth;
 
-// Adjust end position to stop when the last card is centered
+function getXValue() {
+    if (window.innerWidth <= 768) { 
+        return -(totalWidth - window.innerWidth / 1.1); // Adjust for mobile
+    } else {
+        return -(totalWidth - window.innerWidth / 1.5); // Default for larger screens
+    }
+}
+
 gsap.to('.horizontal', {
-    x: () => -(totalWidth - window.innerWidth /1.2), // Stop when last card is in center
+    x: getXValue,
     ease: "none",
     scrollTrigger: {
         trigger: '.horizontal-scoll-wrapper',
-        start: 'top top',
-        end: () => "+=" + (totalWidth - window.innerWidth / 1.5), // Stop sooner so footer appears
+        start: 'top 25%',
+        end: () => "+=" + (totalWidth - window.innerWidth / (window.innerWidth <= 768 ? 1 : 1.2)), 
         pin: '.horizontal-scoll-wrapper',
-        scrub: 1,  // Smooth scrolling
-        markers: false, // Hide debugging markers
+        scrub: 1, 
+        markers: false,
         invalidateOnRefresh: true,
     }
 });
