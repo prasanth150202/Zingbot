@@ -4,50 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Zing-bot</title>
-     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png" >
+
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Local Stylesheets -->
     <link href="assets/css/slick.css" rel="stylesheet">
     <link href="assets/css/slick-theme.css" rel="stylesheet">
-    
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+
+    <!-- GSAP and ScrollTrigger JS -->
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/scrolltrigger.min.js"></script>
- 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href=
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-       
+    
+    <!-- Bootstrap JS and Popper.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Carousel CSS and JS from CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 
 </head>
+
 <body>
-    <!-- <div class="announcement-bar">
-        Trusted by 5000+ Marketers Globally
-    </div> -->
-    
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/Logo horizontal 1.png"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Integrations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
 
-                </ul>
-            </div>
-            <div class="d-none d-lg-block">
-                <button class="btn btn-outline-light me-2">Login</button>
-                <button class="btn btn-warning">Sign Up</button>
-            </div>
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html"><img src="img/Logo horizontal 1.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/index.html#Integrations">Integrations</a></li>
+                <li class="nav-item"><a class="nav-link" href="/index.html#Features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="/form.html">Contact</a></li>
+                <div class="d-lg-none"> <!-- Visible only on mobile -->
+                    <button class="btn btn-outline-light me-2" onclick="window.open('https://app.zingbot.io', '_blank')">Login</button>
+                    <button class="btn btn-warning" onclick="window.location.href='/form.html'">Sign Up</button>
+                </div>
+                
+                
+            </ul>
         </div>
-    </nav>
-
+        <div class="d-none d-lg-block">
+             <!-- Visible only on mobile -->
+                <button class="btn btn-outline-light me-2" onclick="window.open('https://app.zingbot.io', '_blank')">Login</button>
+                <button class="btn btn-warning" onclick="window.location.href='/form.html'">Sign Up</button>
+                    </div>
+    </div>
+</nav>
 
     <section class="banner-area pt-0" style="margin-top: 150px; ">
         <div class="container mb-20">
@@ -75,9 +91,10 @@
            </div>
         </div>
      </section>
-          <section id="horizontal-scoll">
+     <div id="Features">
+          <section id="horizontal-scoll ">
         <div class="horizontal-scoll-wrapper">
-            <div class="text-center banner-5-title stats-heading Feautures mt-auto" ><h1    class="fw-bold" > Our Feautures</h1></div>
+            <div class="text-center banner-5-title stats-heading Feautures mt-auto" ><h1    class="fw-bold" > Our Features</h1></div>
 
             <div class="horizontal">
                 <div class="d-flex justify-content-center text-center " >
@@ -135,9 +152,10 @@
            
         </div>
     </section>
-    <div></div>
-  
-     <section id="service"  style=" background: linear-gradient(90deg, rgb(0, 78, 121) 0%, rgb(1, 102, 129) 48%, rgb(1, 115, 177) 100%); border-radius: 20px; margin: 20px ;">
+</div>
+    <div  id="Integrations"></div>
+  <div>
+     <section id="service Integrations "  style=" background: linear-gradient(90deg, rgb(0, 78, 121) 0%, rgb(1, 102, 129) 48%, rgb(1, 115, 177) 100%); border-radius: 20px; margin: 20px ;">
       <div class="p-lg-3 p-1 p-md-1 rounded-4 ">
          <div class="row justify-content-center align-items-center">
             <div >
@@ -191,7 +209,7 @@
 
 
 
-   <h1 class="banner-5-title  stats-heading-1 text-center">Over 100 Smooth Integrations at Your Fingertips</h1>
+   <h1  class="banner-5-title  stats-heading-1 text-center">Over 100 Smooth Integrations at Your Fingertips</h1>
 
     <div class="slider-container ">
         <div class="logo-slider">
@@ -445,10 +463,10 @@
        <button class="btn" data-tab="support" data-image="img/3zing.gif">Support</button>
     </div>
  
-    <div class="row align-items-center max-width-500  mx-auto mt-4 text-center">
+    <div class="row align-items-center max-width-500 imgre mx-auto mt-4 text-center">
        <div class="col-md-6">
            <div class="features-content active mx-auto" id="marketing">
-               <h4 class="text-center">Increase Engagement and Drive Conversions</h4>
+               <h2 class="text-center">Increase Engagement and Drive Conversions</h2>
                <ul class="text-start">
                   <li>Capture leads through click-to-chat options, ads, QR codes, and interactive widgets.</li>
                   <li>Automate tailored campaigns to guide customers from awareness to brand loyalty.</li>
@@ -456,7 +474,7 @@
                </ul>
            </div>
            <div class="features-content mx-auto" id="sales">
-               <h4 class="text-center">Speed Up Your Sales Process</h4>
+               <h2 class="text-center">Speed Up Your Sales Process</h2>
                <ul class="text-start">
                   <li>Engage prospects with focused messaging and valuable content.</li>
                   <li>Automate follow-ups to nurture leads and ensure timely conversions.</li>
@@ -464,7 +482,7 @@
                </ul>
            </div>
            <div class="features-content mx-auto" id="support">
-               <h4 class="text-center">Improve Customer Support</h4>
+               <h2 class="text-center">Improve Customer Support</h2>
                <ul class="text-start">
                   <li>Offer 24/7 assistance with AI-powered chatbots.</li>
                   <li>Resolve customer queries instantly with automated workflows.</li>
@@ -474,7 +492,7 @@
        </div>
        <div class="col-md-6 text-center">
            <div class="chat-box">
-               <img style="width: 200px;" src="img/1zing.gif" alt="Omnichannel Marketing" id="tab-image">
+               <img  src="img/1zing.gif" alt="Omnichannel Marketing" id="tab-image">
            </div>
        </div>
     </div>
@@ -507,7 +525,7 @@
 
 <footer class="footer mt-auto">
     <div class="container">
-        <div class="row text-center text-md-start">
+        <div class="row text-center">
             <!-- Logo Section -->
             <div class="col-md-3 mb-4">
                 <img src="img/Logo W PNG.png" alt="Logo" class="img-fluid" style="max-width: 200px;">
@@ -517,130 +535,49 @@
             <div class="col-md-3 mb-4">
                 <h5>Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Integrations</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+                   <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/index.html#Integrations">Integrations</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/index.html#Features">Features</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/form.html">Contact</a></li>
+               </ul>
             </div>
  
             <!-- Address Section -->
             <div class="col-md-3 mb-4">
-                <h5>Address</h5>
-                <p>123 Main Street,<br>City, Country<br>Email: info@zingbot.io</p>
+                <h5>
+                    ZINGBOT
+                  </h5>
+                <p>200/393,
+                   SLV DS Centre, Near Chettinad Courtyard, Siddhapudur,<br> Coimbatore - 641044<br>Tamilnadu<br>INDIA<br>Email: info@zingbot.io</p>
             </div>
  
             <!-- Follow Us Section -->
-            <div class="col-md-2 mb-4  d-flex row justify-content-center align-content-start  align-items-center">
+            <div class="col-md-3 mb-4 mx-auto d-flex row justify-content-center  align-items-center align-content-start  ">
                 <h5>Follow Us</h5>
-                <div class="social-icons d-flex gap-3 justify-content-center mx-auto ">
-                    <a href="#"><i style="font-size: 25px;"class="fa-brands fa-facebook "></i></a>
-                    <a href="#"><i style="font-size: 25px;" class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i style="font-size: 25px;" class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i style="font-size: 25px;" class=" fa-brands fa-linkedin"></i></a>
-                </div>
+                <div class="social-icons d-flex gap-3 justify-content-center mx-auto">
+                   <a href="https://www.facebook.com/profile.php?id=61572797889623#" target="_blank">
+                       <i style="font-size: 25px;" class="fa-brands fa-facebook"></i>
+                   </a>
+                   <a href="https://www.instagram.com/zingbot.io?igsh=OXc5d2cxcWx1eGxn" target="_blank">
+                       <i style="font-size: 25px;" class="fa-brands fa-instagram"></i>
+                   </a>
+                   <a href="https://www.linkedin.com/company/zing-bot/" target="_blank">
+                       <i style="font-size: 25px;" class="fa-brands fa-linkedin"></i>
+                   </a>
+               </div>
+               
             </div>
         </div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".marketing-tabs button");
-    const contents = document.querySelectorAll(".features-content");
-    const image = document.getElementById("tab-image");
-
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            // Remove active class from all buttons
-            buttons.forEach(btn => btn.classList.remove("gradientbutton"));
-            this.classList.add("gradientbutton");
-
-            // Hide all content sections
-            contents.forEach(content => content.classList.remove("active"));
-
-            // Show the corresponding content
-            const tabId = this.getAttribute("data-tab");
-            document.getElementById(tabId).classList.add("active");
-
-            // Change the image based on the active tab
-            const imageSource = this.getAttribute("data-image");
-            image.src = imageSource;
-        });
-    });
-});
-
-</script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Slick JS -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-
-<script>
-    $(document).ready(function(){
-        $('.logo-slider').slick({
-            slidesToShow: 5,   // Number of logos visible at once
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 0,
-            infinite: true,
-            speed: 4000,
-            arrows: false,
-            dots: false,
-            pauseOnHover: false,
-            cssEase: 'linear',
-            variableWidth: true // Allows smooth transition without gaps
-        });
-    });
-</script>
-<script>
-    function startCounterAnimation(counter) {
-        const target = +counter.getAttribute('data-target');
-        const speed = 200; // Adjust speed here (Lower is faster)
-        const step = target / speed;
+ 
+        <!-- Copyright -->
+        <div class="text-center mt-4">
+            <p class="mb-0">&copy; 2025 Zing-Bot. All Rights Reserved.</p>
+        </div>
+    </div>
+ </footer>    
+        <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
+        <script src="scroll.js"></script> 
+        <script src="main.js"></script> 
         
-        let count = 0;
-        function updateCount() {
-            if (count < target) {
-                count += step;
-                counter.innerText = Math.ceil(count);
-                requestAnimationFrame(updateCount); // Smooth animation
-            } else {
-                counter.innerText = target; // Ensure final exact value
-            }
-        }
-        updateCount();
-    }
-
-    // Observer to trigger animation when visible
-    const counters = document.querySelectorAll('.stat-number');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                startCounterAnimation(entry.target);
-                observer.unobserve(entry.target); // Stop observing after animation starts
-            }
-        });
-    }, { threshold: 0.5 }); // 50% visibility to start
-
-    counters.forEach(counter => observer.observe(counter));
-document.querySelectorAll(".click-animation").forEach((element) => {
-  element.addEventListener("click", function (e) {
-    let ripple = document.createElement("span");
-    ripple.classList.add("ripple");
-    
-    let rect = element.getBoundingClientRect();
-    ripple.style.left = `${e.clientX - rect.left - 50}px`;
-    ripple.style.top = `${e.clientY - rect.top - 50}px`;
-    
-    this.appendChild(ripple);
-
-    setTimeout(() => {
-      ripple.remove();
-    }, 600);
-  });
-});
-
-
-</script>
-<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
-<script src="scroll.js"></script> 
 </body>
 </html>

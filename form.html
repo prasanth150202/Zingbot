@@ -4,21 +4,36 @@
 <head>
    <title>Zing-bot</title>
   
-   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-   <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+   <title>Zing-bot</title>
+    
+   <!-- Bootstrap CSS from CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="icon" type="image/png" href="img/favicon.png">
+
+   <!-- Font Awesome from CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+   <!-- Local Stylesheets -->
    <link href="assets/css/slick.css" rel="stylesheet">
    <link href="assets/css/slick-theme.css" rel="stylesheet">
-   
-   <script src="assets/js/bootstrap.bundle.min.js"></script>
+   <link href="style.css" rel="stylesheet">
+
+   <!-- GSAP and ScrollTrigger JS -->
    <script src="assets/js/gsap.min.js"></script>
    <script src="assets/js/scrolltrigger.min.js"></script>
+   
+   <!-- Bootstrap JS and Popper.js from CDN -->
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-   <link href="style.css" rel="stylesheet">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-   <link rel="stylesheet" href=
-   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
+   <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   <!-- Slick Carousel CSS and JS from CDN -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
 
    <style>
    body {
@@ -122,35 +137,35 @@ button:hover {
           </div>
       </div>
   </div>
-   <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-      <div class="container-fluid d-flex justify-content-between align-items-center">
-          <!-- Logo -->
-          <a class="navbar-brand" href="#">
-              <img src="img/Logo horizontal 1.png" alt="Logo">
-          </a>
-  
-          <!-- Navbar Menu -->
-          <div class="collapse navbar-collapse position-absolute start-50 translate-middle-x" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Integrations</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-              </ul>
-          </div>
-  
-          <!-- Buttons (Hidden in mobile) -->
-          <div class="d-none d-lg-block">
-              <button class="btn btn-outline-light me-2">Login</button>
-              <button class="btn btn-warning">Sign Up</button>
-          </div>
-  
-          <!-- Mobile Menu Button -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-      </div>
-  </nav>
+   
+
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+   <div class="container-fluid">
+       <a class="navbar-brand" href="/index.html"><img src="img/Logo horizontal 1.png"></a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+           <ul class="navbar-nav">
+               <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="/index.html#Integrations">Integrations</a></li>
+               <li class="nav-item"><a class="nav-link" href="/index.html#Features">Features</a></li>
+               <li class="nav-item"><a class="nav-link" href="/form.html">Contact</a></li>
+           <div class="d-lg-none"> <!-- Visible only on mobile -->
+            <button class="btn btn-outline-light me-2" onclick="window.open('https://app.zingbot.io', '_blank')">Login</button>
+            <button class="btn btn-warning" onclick="window.location.href='/form.html'">Sign Up</button>
+        </div>
+        
+        
+    </ul>
+</div>
+<div class="d-none d-lg-block">
+     <!-- Visible only on mobile -->
+        <button class="btn btn-outline-light me-2" onclick="window.open('https://app.zingbot.io', '_blank')">Login</button>
+        <button class="btn btn-warning" onclick="window.location.href='/form.html'">Sign Up</button>
+            </div>
+   </div>
+</nav>
      <div id="popup-box" style="margin-top: 150px; " >    
         <div class="content1 " >
         
@@ -182,7 +197,7 @@ button:hover {
         
     <footer class="footer mt-auto">
       <div class="container">
-          <div class="row text-center text-md-start">
+          <div class="row text-center">
               <!-- Logo Section -->
               <div class="col-md-3 mb-4">
                   <img src="img/Logo W PNG.png" alt="Logo" class="img-fluid" style="max-width: 200px;">
@@ -192,28 +207,37 @@ button:hover {
               <div class="col-md-3 mb-4">
                   <h5>Quick Links</h5>
                   <ul class="list-unstyled">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Integrations</a></li>
-                      <li><a href="#">Features</a></li>
-                      <li><a href="#">Contact</a></li>
-                  </ul>
+                     <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#Integrations">Integrations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#Features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/form.html">Contact</a></li>
+                 </ul>
               </div>
    
               <!-- Address Section -->
               <div class="col-md-3 mb-4">
-                  <h5>Address</h5>
-                  <p>123 Main Street,<br>City, Country<br>Email: info@zingbot.io</p>
+                  <h5>
+                      ZINGBOT
+                    </h5>
+                  <p>200/393,
+                     SLV DS Centre, Near Chettinad Courtyard, Siddhapudur,<br> Coimbatore - 641044<br>Tamilnadu<br>INDIA<br>Email: info@zingbot.io</p>
               </div>
    
               <!-- Follow Us Section -->
-              <div class="col-md-2 mb-4  d-flex row justify-content-center align-content-start  align-items-center">
+              <div class="col-md-3 mb-4 mx-auto d-flex row justify-content-center  align-items-center align-content-start  ">
                   <h5>Follow Us</h5>
-                  <div class="social-icons d-flex gap-3 justify-content-center mx-auto ">
-                      <a href="#"><i style="font-size: 25px;"class="fa-brands fa-facebook "></i></a>
-                      <a href="#"><i style="font-size: 25px;" class="fa-brands fa-twitter"></i></a>
-                      <a href="#"><i style="font-size: 25px;" class="fa-brands fa-instagram"></i></a>
-                      <a href="#"><i style="font-size: 25px;" class=" fa-brands fa-linkedin"></i></a>
-                  </div>
+                  <div class="social-icons d-flex gap-3 justify-content-center mx-auto">
+                     <a href="https://www.facebook.com/profile.php?id=61572797889623#" target="_blank">
+                         <i style="font-size: 25px;" class="fa-brands fa-facebook"></i>
+                     </a>
+                     <a href="https://www.instagram.com/zingbot.io?igsh=OXc5d2cxcWx1eGxn" target="_blank">
+                         <i style="font-size: 25px;" class="fa-brands fa-instagram"></i>
+                     </a>
+                     <a href="https://www.linkedin.com/company/zing-bot/" target="_blank">
+                         <i style="font-size: 25px;" class="fa-brands fa-linkedin"></i>
+                     </a>
+                 </div>
+                 
               </div>
           </div>
    
