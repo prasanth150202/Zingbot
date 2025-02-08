@@ -4,49 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Zing-bot</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="assets/css/slick-theme.css" rel="stylesheet">
+    
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/scrolltrigger.min.js"></script>
+ 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href=
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-
-
+       </head>
 <body>
     <!-- <div class="announcement-bar">
         Trusted by 5000+ Marketers Globally
     </div> -->
     
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/Logo horizontal 1.png"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Integrations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                
-                </ul>
-            </div>
-            <div class="d-none d-lg-block">
-                <button class="btn btn-outline-light me-2">Login</button>
-                <button class="btn btn-warning">Sign Up</button>
-            </div>
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="img/Logo horizontal 1.png" alt="Logo">
+        </a>
+
+        <!-- Navbar Menu -->
+        <div class="collapse navbar-collapse position-absolute start-50 translate-middle-x" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Integrations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
         </div>
-    </nav>
+
+        <!-- Buttons (Hidden in mobile) -->
+        <div class="d-none d-lg-block">
+            <button class="btn btn-outline-light me-2">Login</button>
+            <button class="btn btn-warning">Sign Up</button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
 
     <section class="banner-area pt-0" style="margin-top: 150px; ">
         <div class="container mb-20">
            <div class="row">
-              <div class="col-12 text-center">
+              <div class="col-12 text-center fistmain">
                     <!-- Banner Title and Description -->
                     <h1 class="banner-5-title mb-3 ">Boost Your Business with <span class="mobile-break"></span> <span class=" fw-bold zing-bot-gradient .glow-icon">Zing-Bot</span> <br>
                     Pay Once Use For Ever </h3>
@@ -76,14 +87,14 @@
             <div class="horizontal">
                 <div class="d-flex justify-content-center text-center " >
                     <div  >
-                        <img src="img/Analyticsd.png" class="imagesize">
+                        <img src="img/icons/1 8.png" class="imagesize">
                         <h6  class="stats-heading-1 ">Analytics</h6>
                         <p class="text-center mx-auto" style="max-width: 400px;">   Boost your chatbot's effectiveness by monitoring, measuring, and fine-tuning interactions in real time. Discover practical insights that empower you to optimize user experiences and elevate engagement.</p>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center text-center " >
                     <div  >
-                        <img src="img/Contacts.png" class="imagesize">
+                        <img src="img/icons/2 7.png" class="imagesize">
                         <h6  class="stats-heading-1 ">Manage Contacts</h6>
                         <p class="text-center mx-auto" style="max-width: 400px;">Keep all your customer information in one unified hub. Effortlessly manage follow-ups, categorize contacts for targeted communication, and foster stronger relationships with minimal effort.
 
@@ -92,7 +103,7 @@
                 </div>
                 <div class="d-flex justify-content-center text-center " >
                     <div  >
-                        <img src="img/Chat.png" class="imagesize">
+                        <img src="img/icons/4 7 (1).png" class="imagesize">
                         <h6  class="stats-heading-1 ">Messaging Inbox</h6>
                         <p class="text-center mx-auto" style="max-width: 400px;">Merge all your communications into a single, well-organized inbox. Seamlessly handle conversations across multiple channels and ensure that every message is attended to promptly.</p>
 
@@ -100,10 +111,17 @@
                 </div>
                 <div class="d-flex justify-content-center text-center " >
                     <div  >
-                        <img src="img/Flow.png" class="imagesize">
+                        <img src="img/icons/3 7.png" class="imagesize">
                         <h6  class="stats-heading-1 ">Automated Conversations</h6>
                         <p class="text-center mx-auto" style="max-width: 400px;">Revolutionize your customer service with smart chat automation. Offer prompt, round-the-clock support while reducing manual workload and ensuring every query is addressed accurately.</p>
 
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center text-center " >
+                    <div  >
+                        <img src="img/icons/Chat GPT & ZING.png"  class="imagesize">
+                        <h6  class="stats-heading-1 ">Intergrate with ChatGPT AI</h6>
+                        <p class="text-center mx-auto" style="max-width: 400px;">Integrate our chatbot with ChatGPT AI for real-time, intelligent responses that enhance customer support and boost productivity</p>
                     </div>
                 </div>
                <div style="margin: 50px;"></div>
@@ -112,7 +130,9 @@
                     <div class="mt-4" >
             
                          <h6  class="stats-heading-1 "> There’s so much more to explore! <br>Are you ready to see all our features?</h6>
-<button class="btn btn-primary mt-4">Schedule meet with us </button>
+                         <a href="/form.html" class="btn btn-primary btn-md p-3 rounded-4" style="z-index: 10; position: relative;">
+                            Book Your Demo Now <span > <img style="width:30px;" class="click-animation"src="img/icons/click (1).png"></span>
+                         </a>
                     </div>
                 </div>
                 
@@ -129,7 +149,7 @@
                <h3 class="fw-bold text-theme fs-3 mb-3 text-center text-white mt-4">Get Started Today | Discover the Power of Zing-Bot</h3>
                <p class="text-black fs-6 mb-4 text-center text-white">Your all-in-one solution for 10+ digital channels</p>
                
-               <div class="d-flex flex-wrap justify-content-center ">
+               <div class="d-flex flex-wrap justify-content-center align-items-center ">
                   <!-- Row 1 -->
                   <div class="col-lg-1 col-md-2 col-4 text-center glow-icon" style="">
                      <img src="img/icons/whatsapp.png" alt="whatsapp ai chatbot" class="img-fluid">
@@ -162,6 +182,9 @@
                   <div class="col-lg-1 col-md-2 col-4 text-center glow-icon" style="">
                      <img src="img/icons/contract-removebg-preview.png" alt="shopee ai chatbot" class="img-fluid w-40">
                   </div>
+                  <div class="col-lg-1 col-md-2 col-4 text-center glow-icon" style="">
+                    <img src="img/icons/shopify.png" alt="shopify ecommerce chat " class="img-fluid" style="width: 40px !important;">
+                 </div>
                </div>
             </div>
          </div>
@@ -415,52 +438,53 @@
   
 </div>
 <div class="container py-5">
-   <div class="text-center">
-       <p class="text-uppercase small text-secondary">Merge Multiple Channels into One Platform</p>
-       <h1>Engage customers your way with an AI-powered omnichannel platform</h1>
-   </div>
-
-   <div class="marketing-tabs">
-    <button class="active btn btn-primary" data-tab="marketing" data-image="img/1.gif">Marketing</button>
-    <button class="btn" data-tab="sales" data-image="img/2.gif">Sales</button>
-    <button class="btn" data-tab="support" data-image="img/3.gif">Support</button>
+    <div class="text-center">
+        <p class="text-uppercase small text-secondary">Merge Multiple Channels into One Platform</p>
+        <h1>Engage customers your way with an AI-powered omnichannel platform</h1>
+    </div>
+ 
+    <!-- Centering Tabs -->
+    <div class="marketing-tabs d-flex justify-content-center gap-3 mt-4">
+       <button class="active btn gradientbutton" data-tab="marketing" data-image="img/1zing.gif">Marketing</button>
+       <button class="btn" data-tab="sales" data-image="img/2zing.gif">Sales</button>
+       <button class="btn" data-tab="support" data-image="img/3zing.gif">Support</button>
+    </div>
+ 
+    <div class="row align-items-center max-width-500  mx-auto mt-4 text-center">
+       <div class="col-md-6">
+           <div class="features-content active mx-auto" id="marketing">
+               <h4 class="text-center">Increase Engagement and Drive Conversions</h4>
+               <ul class="text-start">
+                  <li>Capture leads through click-to-chat options, ads, QR codes, and interactive widgets.</li>
+                  <li>Automate tailored campaigns to guide customers from awareness to brand loyalty.</li>
+                  <li>Send personalized retargeting messages with segmented flows.</li>
+               </ul>
+           </div>
+           <div class="features-content mx-auto" id="sales">
+               <h4 class="text-center">Speed Up Your Sales Process</h4>
+               <ul class="text-start">
+                  <li>Engage prospects with focused messaging and valuable content.</li>
+                  <li>Automate follow-ups to nurture leads and ensure timely conversions.</li>
+                  <li>Integrate with your CRM for streamlined lead management.</li>
+               </ul>
+           </div>
+           <div class="features-content mx-auto" id="support">
+               <h4 class="text-center">Improve Customer Support</h4>
+               <ul class="text-start">
+                  <li>Offer 24/7 assistance with AI-powered chatbots.</li>
+                  <li>Resolve customer queries instantly with automated workflows.</li>
+                  <li>Enhance customer satisfaction by delivering personalized, responsive support.</li>
+               </ul>
+           </div>
+       </div>
+       <div class="col-md-6 text-center">
+           <div class="chat-box">
+               <img style="width: 200px;" src="img/1zing.gif" alt="Omnichannel Marketing" id="tab-image">
+           </div>
+       </div>
+    </div>
  </div>
  
- <div class="row align-items-center">
-    <div class="col-md-6">
-        <div class="features-content active mx-auto" id="marketing">
-            <h4 class="text-center">Increase Engagement and Drive Conversions</h4>
-            <ul>
-             <li>Capture leads through click-to-chat options, ads, QR codes, and interactive widgets.</li>
-             <li>Automate tailored campaigns to guide customers from awareness to brand loyalty.</li>
-             <li>Send personalized retargeting messages with segmented flows.</li>
-           </ul>
-        </div>
-        <div class="features-content  mx-auto" id="sales">
-         <h4 class="text-center">Speed Up Your Sales Process</h4>
-            <ul>
-             <li>Engage prospects with focused messaging and valuable content.</li>
-             <li>Automate follow-ups to nurture leads and ensure timely conversions.</li>
-             <li>Integrate with your CRM for streamlined lead management.</li>
-            </ul>
-        </div>
-        <div class="features-content  mx-auto" id="support">
-         <h4 class="text-center">Improve Customer Support</h4>
-            <ul>
-             <li>Offer 24/7 assistance with AI-powered chatbots.</li>
-             <li>Resolve customer queries instantly with automated workflows.</li>
-             <li>Enhance customer satisfaction by delivering personalized, responsive support.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-md-6 text-center">
-        <div class="chat-box">
-            <img style="width: 200px;" src="img/1.gif" alt="Omnichannel Marketing" id="tab-image">
-        </div>
-    </div>
- </div>
- 
-</div>
 
 <section class="about-section">
     <div class="container">
@@ -473,16 +497,11 @@
             <div class="col-lg-6 d-flex flex-column align-items-center align-items-lg-start">
                 <h2 class="mb-3">About Us</h2>
                 <p>
-                    Welcome to <strong>Our Company</strong>. We are passionate about delivering high-quality products 
-                    and services to our customers. Our team is dedicated to innovation, creativity, and customer 
-                    satisfaction.
-                </p>
-                <p>
-                    With years of experience, we have built a strong reputation in the industry. Our commitment 
-                    to excellence ensures that we continuously improve and evolve to meet the needs of our customers.
-                </p>
+                    Zingbot is an AI-powered chatbot automation platform designed to help businesses enhance customer engagement, sales, and support across multiple channels like WhatsApp, Messenger, Instagram, Telegram, and more. Our platform offers omnichannel automation, AI integration, and 24/7 availability, enabling businesses to automate conversations, streamline sales funnels, and improve customer satisfaction. With an intuitive drag-and-drop flow builder, Zingbot makes it easy for businesses to create powerful chatbots without coding. Whether you're a small business or an enterprise, Zingbot offers flexible solutions to grow your business and optimize customer interactions.               </p>
                 <!-- Button Centered -->
-                <a href="#" class="btn btn-primary mt-3">Learn More</a>
+                <a href="/form.html" class="btn btn-primary btn-md p-3 rounded-4" style="z-index: 10; position: relative;">
+                    Book Your Demo Now <span > <img style="width:30px;" class="click-animation"src="img/icons/click (1).png"></span>
+                 </a>
             </div>
         </div>
     </div>
@@ -492,48 +511,41 @@
 
 
 <footer class="footer mt-auto">
-   <div class="container">
-       <div class="row text-center text-md-start">
-           <!-- Logo Section -->
-           <div class="col-md-3 mb-4">
-               <img src="img/Logo W PNG.png" alt="Logo" class="img-fluid" style="max-width: 200px;">
-           </div>
-           
-           <!-- Quick Links -->
-           <div class="col-md-3 mb-4">
-               <h5>Quick Links</h5>
-               <ul class="list-unstyled">
-                   <li><a href="#">Home</a></li>
-                   <li><a href="#">Integrations</a></li>
-                   <li><a href="#">Features</a></li>
-                   <li><a href="#">Contact</a></li>
-               </ul>
-           </div>
-
-           <!-- Address Section -->
-           <div class="col-md-3 mb-4">
-               <h5>Address</h5>
-               <p>123 Main Street,<br>City, Country<br>Email: info@zingbot.io</p>
-           </div>
-
-           <!-- Follow Us Section -->
-           <div class="col-md-3 mb-4">
-               <h5>Follow Us</h5>
-               <div class="social-icons d-flex gap-3 justify-content-center">
-                   <a href="#"><i style="font-size: 25px;"class="fa-brands fa-facebook"></i></a>
-                   <a href="#"><i style="font-size: 25px;" class="fa-brands fa-twitter"></i></a>
-                   <a href="#"><i style="font-size: 25px;" class="fa-brands fa-instagram"></i></a>
-                   <a href="#"><i style="font-size: 25px;" class=" fa-brands fa-linkedin"></i></a>
-               </div>
-           </div>
-       </div>
-
-       <!-- Copyright -->
-       <div class="text-center mt-4">
-           <p class="mb-0">&copy; 2025 Zing-Bot. All Rights Reserved.</p>
-       </div>
-   </div>
-</footer>
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- Logo Section -->
+            <div class="col-md-3 mb-4">
+                <img src="img/Logo W PNG.png" alt="Logo" class="img-fluid" style="max-width: 200px;">
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Integrations</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+ 
+            <!-- Address Section -->
+            <div class="col-md-3 mb-4">
+                <h5>Address</h5>
+                <p>123 Main Street,<br>City, Country<br>Email: info@zingbot.io</p>
+            </div>
+ 
+            <!-- Follow Us Section -->
+            <div class="col-md-2 mb-4  d-flex row justify-content-center align-content-start  align-items-center">
+                <h5>Follow Us</h5>
+                <div class="social-icons d-flex gap-3 justify-content-center mx-auto ">
+                    <a href="#"><i style="font-size: 25px;"class="fa-brands fa-facebook "></i></a>
+                    <a href="#"><i style="font-size: 25px;" class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i style="font-size: 25px;" class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i style="font-size: 25px;" class=" fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".marketing-tabs button");
@@ -543,8 +555,8 @@
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             // Remove active class from all buttons
-            buttons.forEach(btn => btn.classList.remove("btn-primary"));
-            this.classList.add("btn-primary");
+            buttons.forEach(btn => btn.classList.remove("gradientbutton"));
+            this.classList.add("gradientbutton");
 
             // Hide all content sections
             contents.forEach(content => content.classList.remove("active"));

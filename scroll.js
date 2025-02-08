@@ -24,3 +24,11 @@ gsap.to('.horizontal', {
         invalidateOnRefresh: true,
     }
 });
+
+
+const toggleButton = document.getElementById('navbar-toggler');
+const navbarMenu = document.getElementById('navbarNav');
+
+toggleButton.addEventListener('click', () => {
+    navbarMenu.classList.toggle('show');
+});
