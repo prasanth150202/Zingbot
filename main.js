@@ -102,3 +102,4 @@ document.querySelectorAll(".click-animation").forEach((element) => {
         }, 600);
     });
 });
+

@@ -1,176 +1,131 @@
-<!doctype html>
-<html lang="zxx">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zing-bot</title>
-
-    <!-- Bootstrap CSS from CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome from CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Local Stylesheets -->
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <link href="assets/css/slick-theme.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-
-    <!-- GSAP and ScrollTrigger JS -->
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/scrolltrigger.min.js"></script>
-    
-    <!-- Bootstrap JS and Popper.js from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Slick Carousel CSS and JS from CDN -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-
-</head>
-
-<body>
-
-<!-- Navbar Code Here -->
-<nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/Logo horizontal 1.png"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Integrations</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div class="d-none d-lg-block">
-            <button class="btn btn-outline-light me-2">Login</button>
-            <button class="btn btn-warning">Sign Up</button>
-        </div>
-    </div>
-</nav>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const buttons = document.querySelectorAll(".marketing-tabs button");
-      const contents = document.querySelectorAll(".features-content");
-      const image = document.getElementById("tab-image");
-
-      buttons.forEach(button => {
-          button.addEventListener("click", function () {
-              // Remove active class from all buttons
-              buttons.forEach(btn => btn.classList.remove("gradientbutton"));
-              this.classList.add("gradientbutton");
-
-              // Hide all content sections
-              contents.forEach(content => content.classList.remove("active"));
-
-              // Show the corresponding content
-              const tabId = this.getAttribute("data-tab");
-              document.getElementById(tabId).classList.add("active");
-
-              // Change the image based on the active tab
-              const imageSource = this.getAttribute("data-image");
-              image.src = imageSource;
-          });
-      });
-  });
-</script>
-
-<!-- Custom JavaScript for closing the hamburger menu -->
-<script>
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            const navbarCollapse = document.getElementById('navbarNav');
-            if (navbarCollapse.classList.contains('show')) {
-                navbarCollapse.classList.remove('show');
-            }
-        });
-    });
-</script>
-
-<script>
-    $(document).ready(function(){
-        $('.logo-slider').slick({
-            slidesToShow: 5,   // Number of logos visible at once
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 0,
-            infinite: true,
-            speed: 4000,
-            arrows: false,
-            dots: false,
-            pauseOnHover: false,
-            cssEase: 'linear',
-            variableWidth: true // Allows smooth transition without gaps
-        });
-    });
-</script>
-
-<script>
-    function startCounterAnimation(counter) {
-        const target = +counter.getAttribute('data-target');
-        const speed = 200; // Adjust speed here (Lower is faster)
-        const step = target / speed;
-
-        let count = 0;
-        function updateCount() {
-            if (count < target) {
-                count += step;
-                counter.innerText = Math.ceil(count);
-                requestAnimationFrame(updateCount); // Smooth animation
-            } else {
-                counter.innerText = target; // Ensure final exact value
-            }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews Slider</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        updateCount();
-    }
+        .container-1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
 
-    // Observer to trigger animation when visible
-    const counters = document.querySelectorAll('.stat-number');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                startCounterAnimation(entry.target);
-                observer.unobserve(entry.target); // Stop observing after animation starts
-            }
+        .banner-5-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .slider {
+            width: 48%; /* Each slider takes up half the container width */
+            position: relative;
+        }
+
+        .slide {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <section id="reviews">
+        <div class="container-1">
+            <div class="slider slider-1">
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 1" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 2" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 3" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 4" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 5" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 6" />
+                </div>
+            </div>
+
+            <div class="slider slider-2">
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 1" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 2" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 3" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 4" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 5" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 6" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Initialize first slider to slide right to left (rtl)
+            $('.slider-1').slick({
+                slidesToShow: 5,   // Number of logos visible at once
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 0,
+                infinite: true,
+                speed: 4000,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                cssEase: 'linear',
+                variableWidth: true, // Allows smooth transition without gaps
+                rtl: true  // Right-to-left sliding for slider-1
+            });
+
+            // Initialize second slider to slide left to right (default direction)
+            $('.slider-2').slick({
+                slidesToShow: 5,   // Number of logos visible at once
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 0,
+                infinite: true,
+                speed: 4000,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                cssEase: 'linear',
+                variableWidth: true, // Allows smooth transition without gaps
+                rtl: false // Left-to-right sliding for slider-2 (default)
+            });
         });
-    }, { threshold: 0.5 }); // 50% visibility to start
-
-    counters.forEach(counter => observer.observe(counter));
-</script>
-
-<script>
-    document.querySelectorAll(".click-animation").forEach((element) => {
-        element.addEventListener("click", function (e) {
-            let ripple = document.createElement("span");
-            ripple.classList.add("ripple");
-
-            let rect = element.getBoundingClientRect();
-            ripple.style.left = `${e.clientX - rect.left - 50}px`;
-            ripple.style.top = `${e.clientY - rect.top - 50}px`;
-
-            this.appendChild(ripple);
-
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
-        });
-    });
-</script>
-
-<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
-<script src="scroll.js"></script> 
-
+    </script>
 </body>
 </html>
