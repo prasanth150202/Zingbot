@@ -6,7 +6,24 @@ body , h1 ,h2 ,h3,h4,h5,h6 ,p,a,ul,li {
 
     font-style: normal;
 }
+.animated-text {
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlide 2s ease-in-out forwards;
+}
 
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
   @media (max-width: 768px) {
         .banner-5-title {
             font-size: 1.5rem; /* Reduced font size for mobile */
