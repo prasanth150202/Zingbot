@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,3 +130,136 @@
     </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews Slider</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container-1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .banner-5-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .slider {
+            width: 48%; /* Each slider takes up half the container width */
+            position: relative;
+        }
+
+        .slide {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <section id="reviews">
+        <div class="container-1">
+            <div class="slider slider-1">
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 1" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 2" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 3" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 4" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 5" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 6" />
+                </div>
+            </div>
+
+            <div class="slider slider-2">
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 1" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 2" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 3" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 4" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 5" />
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/150" alt="Review 6" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Initialize first slider to slide right to left (rtl)
+            $('.slider-1').slick({
+                slidesToShow: 5,   // Number of logos visible at once
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 0,
+                infinite: true,
+                speed: 4000,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                cssEase: 'linear',
+                variableWidth: true, // Allows smooth transition without gaps
+                rtl: true  // Right-to-left sliding for slider-1
+            });
+
+            // Initialize second slider to slide left to right (default direction)
+            $('.slider-2').slick({
+                slidesToShow: 5,   // Number of logos visible at once
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 0,
+                infinite: true,
+                speed: 4000,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                cssEase: 'linear',
+                variableWidth: true, // Allows smooth transition without gaps
+                rtl: false // Left-to-right sliding for slider-2 (default)
+            });
+        });
+    </script>
+</body>
+</html>
+>>>>>>> a094891 (Initial commit - pushing entire folder)
