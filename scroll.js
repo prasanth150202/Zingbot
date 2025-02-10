@@ -16,7 +16,7 @@ gsap.to('.horizontal', {
     ease: "none",
     scrollTrigger: {
         trigger: '.horizontal-scoll-wrapper',
-        start: 'top 25%',
+        start: window.innerWidth <= 768 ? 'top 25%' : 'top 20%',
         end: () => "+=" + (totalWidth - window.innerWidth / (window.innerWidth <= 768 ? 1 : 1.2)), 
         pin: '.horizontal-scoll-wrapper',
         scrub: 1, 
